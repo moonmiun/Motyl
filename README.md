@@ -6,6 +6,8 @@
 - Interactively through Powershell or any kind of terminal;
 - Interactively through your Browser, with a personalised, user-friendly interface.
 
+Both ways have to be initialized by running "Motyl.py".
+
 <br> Currently working on (08/07/2024):
 <br> - Automate the process so it can be implemented into automatic pipelines.
 <br>
