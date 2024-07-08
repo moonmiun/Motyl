@@ -5,8 +5,8 @@
 <br> The Web service can currently be used in two ways:
 - Interactively through Powershell or any kind of terminal;
 - Interactively through your Browser, with a personalised, user-friendly interface.
-<br>
+
 <br> Currently working on (08/07/2024):
-- Automate the process so it can be implemented into automatic pipelines.
+<br> - Automate the process so it can be implemented into automatic pipelines.
 <br>
 <br> The project is expected to be completed not later December 2024. for curricular reasons.
