@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching scores for {{sequence}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 25px;
+            
+        }
+        p {
+            margin-bottom: 2px;
+            
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        button {
+            margin: 2px;
+            font-size: 15px;
+            padding: 5px 25px;
+        }
+        .edit-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4d88f5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Matching scores for {{sequence}}</h1>
+    {% for id in simple %}
+        {% set TF = dbm.get_from_database(id) %}
+
+        <p>{{ TF.ID }} has {{ simple[id] }}/{{length}} matching bases, for a probability of {{ sophisticated[id]["score"] }} of being your binding site ({{ sophisticated[id]["ratio"]}}% of consensus sequence '{{ TF.sequence }}' probability)</p>
+        
+        <a href="/motifs/{{ TF.ID }}"><button>Click here to get more info: {{ TF.ID }}</button></a>
+    {% endfor %}
+    <p></p>
+    <a href="/" class="edit-button">Return home</a>
+</body>
+</html>

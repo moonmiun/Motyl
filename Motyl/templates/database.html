@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motif Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 25px;
+            text-align: center;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-size: 35px;
+        }
+        .motif-id {
+            font-weight: bold;
+            font-size: 13px;
+        }
+        
+        button {
+            margin: 2px;
+            font-size: 15px;
+            padding: 5px 25px;
+        }
+
+        .motif-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 3%;
+            margin-bottom: 20px;
+        }
+        .motif-card {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .edit-button {
+            display: inline-block;
+            padding: 7px 20px;
+            background-color: #bdcddd;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Motif Database</h1>
+    <p>Click on the motif to get more info or click on the button to go back</p>
+    
+    <a href="/" class="edit-button">Return home</a>
+    <p></p>
+    {% for sublist in list_of_lists %}
+        <div class="motifs-container" style="float:left; width:30%">
+            {% for motif in sublist %}
+                <div class = "motif-card">
+                    <a href="/motifs/{{ motif.ID }}" class="motif-id"><button>{{ motif.ID }}</button></a>
+                </div>
+            {% endfor %}
+            <p></p>
+        </div>
+    {% endfor %}
+    
+    
+</body>
+</html>
