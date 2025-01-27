@@ -3,7 +3,7 @@ output:
   html_document: default
   pdf_document: default
 ---
-<img src="logo.png" alt="logo" style="width:300px; height:auto; display:block; margin:auto;">
+<img src="static/logo.png" alt="logo" style="width:300px; height:auto; display:block; margin:auto;">
 
 # **Motyl**
 Scientific programming Project (Python) by Flavia Leotta
@@ -281,7 +281,7 @@ For a better navigation of the site pages, a useful sitemap is given in Motyl_si
 
 #### 2.1 Welcome page
 The welcome page is the first page that is shown when clicking on the URL (in the previous examples http://127.0.0.1:5000): it allows the users to navigate through the main three pages of the site by simply clicking on the buttons displayed.<br>
-<img src="welcome_page.png" alt="Descrizione dell'immagine" style="width:300px; height:auto;">
+<img src="documentation/welcome_page.png" alt="Descrizione dell'immagine" style="width:300px; height:auto;">
 
 - 'Search motif' redirects to the page that allows the user to provide a JASPAR ID to look for;
 - 'View motif database' redirects to the database page;
@@ -291,13 +291,13 @@ The welcome page is the first page that is shown when clicking on the URL (in th
 
 #### 2.2 Database page
 The database page simply displays the JASPAR IDs of all the motifs present in the local database: by simply clicking on a motif button, the site redirects the user to the individual motif page.<br>
-<img src="motif_database.png" alt="Database page" style="width:300px; height:auto;">
+<img src="documentation/motif_database.png" alt="Database page" style="width:300px; height:auto;">
 <br>
 <br>
 
 #### 2.3 Search motif page
 This page allows the user to provide a JASPAR ID and looks for it in the local database. If a match is found, it redirects to the motif page while, if not, it looks for the motif on the JASPAR database and redirects to a slightly different version of the motif page.<br>
-<img src="search_motif.png" alt="Search motif page" style="width:300px; height:auto;">
+<img src="documentation/search_motif.png" alt="Search motif page" style="width:300px; height:auto;">
 <br>
 <br>
 
@@ -308,31 +308,31 @@ In this page the user can find all the information about a certain motif, as lon
 - Edit motif information;
 - Delete motif from the database.
 
-<img src="motif_page.png" alt="Motif from database page" style="width:300px; height:auto;">
+<img src="documentation/motif_page.png" alt="Motif from database page" style="width:300px; height:auto;">
 <br>
 <br>
 
 #### 2.5 Motif from internet page
 This page is a slightly different version of the motif from database page, but for obvious reason it doesn't let the user edit or delete the motif, because the information is not stored in the database. If the user wishes to edit the motif, they first need to save it in the database through the provided button.<br>
-<img src="motif_from_internet.png" alt="Motif from internet pagee" style="width:300px; height:auto;">
+<img src="documentation/motif_from_internet.png" alt="Motif from internet pagee" style="width:300px; height:auto;">
 <br>
 <br>
 
 #### 2.6 Edit motif
 This page lets the user edits all the attributes of a motif, aside from the JASPAR ID, the name and the PFM. In the species section, more than one species can be added by simply dividing them by commas. It is advisable to not leave a space after the comma because they're going to be retained and in this way the species could be saved with a space before their name (for example, " Mus Musculus" instead of "Mus Musculus").<br>
-<img src="edit_motif.png" alt="Edit motif" style="width:300px; height:auto;">
+<img src="documentation/edit_motif.png" alt="Edit motif" style="width:300px; height:auto;">
 <br>
 <br>
 
 #### 2.7 Provide sequence page
 In this page the user can provide a nucleotide sequence: only sequences containing 'A', 'C', 'G' and 'T' are allowed.<br>
-<img src="sequence.png" alt="Provide sequence page" style="width:300px; height:auto;">
+<img src="documentation/sequence.png" alt="Provide sequence page" style="width:300px; height:auto;">
 <br>
 <br>
 
 #### 2.8 Matching scores page
 This page returns the matching scores obtained by comparing the provided sequence to all the motifs of the same length, using the scoring methods described previously. The user can also access each motif's information by clicking on the provided button.<br>
-<img src="matching_scores.png" alt="Matching scores page" style="width:300px; height:auto;">
+<img src="documentation/matching_scores.png" alt="Matching scores page" style="width:300px; height:auto;">
 
 
 
