@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a sequence</title>
+    <style>
+      body {
+            text-align: center;
+        }
+      button[type="submit"] {
+      font-size: 20px;
+      padding: 10px 20px;
+      }
+
+      form {
+      text-align: center;
+      }
+      .edit-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4d88f5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+      }   
+    </style>
+</head>
+<body>
+  <h1>Submit a short DNA sequence</h1>
+  <p>Type the sequence using only allowed nucleotides (N not supported)</p>
+</body>
+<form action="/sequence/" method="GET">
+    <input type="text" id = "querysequence" name="querysequence" placeholder="Type DNA sequence...">
+    <button type="submit">Submit</button>
+    <p></p>
+    <a href="/" class="edit-button">Return home</a>
+  </form>
+
+
+</html>

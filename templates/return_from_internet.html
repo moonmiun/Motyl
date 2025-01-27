@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TF Binding site motif database - {{ motif.ID }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1,p {
+            text-align: center;
+        }
+        .motif-card {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .motif-id {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .motif-info {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4d88f5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .edit-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4d88f5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TF binding site motif - {{ motif.ID }}</h1>
+    <p>This motif was found on the internet, press the button at the end of the page to save it in the database</p>
+    <div class="motif-card">
+        <div class="motif-id">{{ motif.ID }}</div>
+        <div class="motif-info">
+            <pre>{{ motif }}</pre>
+        </div>
+        <a href="/motifs/{{ motif.ID}}_svg" class="download-button">Download svg</a>
+        <a href="/motifs/{{ motif.ID}}_save_in_database" class="edit-button">Save motif</a>
+        <a href="/search_page" class="edit-button">Return to search</a>
+        <a href="/" class="edit-button">Return home</a>
+    </div>
+</body>
+</html>
